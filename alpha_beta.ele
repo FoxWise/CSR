@@ -1,0 +1,37 @@
+&run_setup
+        lattice = lattice.lte,
+        default_order = 1,
+        use_beamline = bl,
+        p_central_mev = 500.0,
+        final = %s.fin,
+        print_statistics = 1
+&end
+
+&twiss_output
+        matched=0,
+        beta_x=1,
+        alpha_x=0
+&end
+
+&run_control
+        n_indices = 2
+&end
+
+&vary_element name=pars, item=betax, initial=20, final=35, index_limit=5, index_number=0 &end 
+
+&vary_element name=pars, item=alphax, initial=1.0, final=2, index_limit=4, index_number=1 &end
+
+&bunched_beam
+        emit_nx=1e-6,
+        emit_ny=1e-6,
+        momentum_chirp=3,
+        use_twiss_command_values=1,
+        n_particles_per_bunch = 50000,
+        sigma_dp = 0.001,
+        sigma_s = 650e-6,
+        distribution_type[0] = 3*"gaussian",
+        distribution_cutoff[0] = 3*3,
+        enforce_rms_values[0] = 1,1,1
+&end
+
+&track &end
