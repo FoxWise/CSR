@@ -14,17 +14,21 @@
 &end
 
 &run_control
-        n_indices = 2
+        n_indices = 4
 &end
 
-&vary_element name=pars, item=betax, initial=20, final=35, index_limit=5, index_number=0 &end 
+&vary_element name=pars1, item=betax, initial=20, final=35, index_limit=5, index_number=0 &end 
 
-&vary_element name=pars, item=alphax, initial=1.0, final=2, index_limit=4, index_number=1 &end
+&vary_element name=pars1, item=alphax, initial=1.0, final=2, index_limit=5, index_number=1 &end
+
+&vary_element name=pars2, item=betax, initial=20, final=35, index_limit=5, index_number=0 &end 
+
+&vary_element name=pars2, item=alphax, initial=1.0, final=2, index_limit=5, index_number=1 &end
 
 &bunched_beam
         emit_nx=1e-6,
         emit_ny=1e-6,
-        momentum_chirp=3,
+        momentum_chirp=5,
         use_twiss_command_values=1,
         n_particles_per_bunch = 50000,
         sigma_dp = 0.001,
