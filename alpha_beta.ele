@@ -21,9 +21,9 @@
 
 &vary_element name=pars1, item=alphax, initial=1.0, final=2, index_limit=5, index_number=1 &end
 
-&vary_element name=pars2, item=betax, initial=20, final=35, index_limit=5, index_number=0 &end 
+&vary_element name=pars2, item=betax, initial=20, final=35, index_limit=5, index_number=2 &end 
 
-&vary_element name=pars2, item=alphax, initial=1.0, final=2, index_limit=5, index_number=1 &end
+&vary_element name=pars2, item=alphax, initial=1.0, final=2, index_limit=5, index_number=3 &end
 
 &bunched_beam
         emit_nx=1e-6,
