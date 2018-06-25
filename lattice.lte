@@ -1,5 +1,6 @@
 q: charge,total=1e-9
-pars: twiss
+pars1: twiss
+pars2: twiss
 B1: csrcsbend,angle=0.1466,l=0.3,e1=0,e2=0.1466,n_kicks=100,bins=600,sg_halfwidth=1
 B2: csrcsbend,angle=-0.1466,l=0.3,e1=-0.1466,e2=0,n_kicks=100,bins=600,sg_halfwidth=1
 B3: csrcsbend,angle=-0.1466,l=0.3,e1=0,e2=-0.1466,n_kicks=100,bins=600,sg_halfwidth=1
@@ -12,6 +13,6 @@ w1: watch,filename="%s.w1",mode=coord
 w2: watch,filename="%s.w2",mode=coord
 w3: watch,filename="%s.w3",mode=coord
 chicane: line=(B1,L1,B2,L2,B3,L1,B4)
-bl: line=(q,pars,w1,chicane,L3,w2,chicane,L4,w3)
+bl: line=(q,pars1,w1,chicane,L3,pars2,w2,chicane,L4,w3)
 bl_nopars: line=(q,w1,chicane,L3,w2,chicane,L4,w3)
 
