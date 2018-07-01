@@ -1,4 +1,3 @@
-#!/bin/sh
 
 sddssequence M_pars.sdds -define=psi -sequence=begin=0.0,number=71,delta=0.1
 
