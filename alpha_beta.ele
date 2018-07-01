@@ -1,7 +1,7 @@
 &run_setup
         lattice = lattice.lte,
         default_order = 1,
-        use_beamline = bl_no_w,
+        use_beamline = bl_no_m,
         p_central_mev = 500.0,
         final = %s.fin,
         print_statistics = 1
@@ -17,13 +17,13 @@
         n_indices = 4
 &end
 
-&vary_element name=pars1, item=betax, initial=1, final=26, index_limit=10, index_number=0 &end 
+&vary_element name=PARS1, item=BETAX, initial=1, final=26.0, index_limit=1, index_number=0 &end 
 
-&vary_element name=pars1, item=alphax, initial=0.5, final=0.8, index_limit=4, index_number=1 &end
+&vary_element name=PARS1, item=ALPHAX, initial=0.5, final=0.8, index_limit=1, index_number=1 &end
 
-&vary_element name=pars2, item=betax, initial=20.0, final=50.0, index_limit=15, index_number=2 &end 
+&vary_element name=PARS2, item=BETAX, initial=20.0, final=50.0, index_limit=1, index_number=2 &end 
 
-&vary_element name=pars2, item=alphax, initial=0.7, final=1.0, index_limit=4, index_number=3 &end
+&vary_element name=PARS2, item=ALPHAX, initial=0.7, final=1.0, index_limit=1, index_number=3 &end
 
 &bunched_beam
         emit_nx=1e-6,

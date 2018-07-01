@@ -12,15 +12,12 @@ file_phase.load('M_pars.sdds')
 
 canv = TCanvas('name','title')
 
-graph = TGraph()
 
-final = len(file_emit.parameterData[39])
+x =np.array(file_phase.columnData[0][0]) #psi
+y =np.array(file_emit.parameterData[39])*10**6 #emit
 
-for n in range (0,final):
-	x =float(file_phase.columnData[0][n]) #alpha
-	y =float(file.parameterData[39][n])*10**6 #beta
-	graph.SetPoint(n, x, y)
-	print(n,"	",x,"emit",z)
+n = len(file_phase.columnData[0][0])
+graph = TGraph(n,x,y)
 
 graph.SetTitle('Final normalized x emitance before 1st compressor, [#mum];#Psi, m;#Emit_{x}, mkm')
 graph.Draw("AP")

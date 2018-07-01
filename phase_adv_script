@@ -10,7 +10,7 @@ sddsprocess M_pars.sdds -define=parameter,beta1,17.6,units=m \
         -define=column,r21,"-1 alpha1 alpha2 mult + beta1 beta2 mult sqrt / psi sin mult alpha1 alpha2 - beta1 beta2 mult sqrt / psi cos mult +" \
         -define=column,r22,"beta2 beta1 / sqrt psi cos psi sin alpha1 mult - mult"
 
-elegant phase_adv.ele 
+exec elegant phase_adv.ele | tee phase_adv.log
 
 
 

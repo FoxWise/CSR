@@ -17,21 +17,15 @@
 n_indices=1
 &end
 
-&alter_elements name=PARS1, item=BETAX, value=17.6 &end 
-
+&alter_elements name=PARS1, item=BETAX, value=17.6 &end
 &alter_elements name=PARS1, item=ALPHAX, value=0.5 &end
-
 &alter_elements name=PARS2, item=BETAX, value=20.0 &end 
-
 &alter_elements name=PARS2, item=ALPHAX, value=0.9 &end
 
-&vary_element name=M1, item=R11, enumeration_file= M_pars.sdds, enumeration_column=r11 &end
-
-&vary_element name=M1, item=R12, enumeration_file= M_pars.sdds, enumeration_column=r12 &end
-
-&vary_element name=M1, item=R21, enumeration_file= M_pars.sdds, enumeration_column=r21 &end
-
-&vary_element name=M1, item=R22, enumeration_file= M_pars.sdds, enumeration_column=r22 &end
+&vary_element name=M1, item=R11, enumeration_file=M_pars.sdds, enumeration_column=r11 &end
+&vary_element name=M1, item=R12, enumeration_file=M_pars.sdds, enumeration_column=r12 &end
+&vary_element name=M1, item=R21, enumeration_file=M_pars.sdds, enumeration_column=r21 &end
+&vary_element name=M1, item=R22, enumeration_file=M_pars.sdds, enumeration_column=r22 &end
 
 &bunched_beam
         emit_nx=1e-6,
