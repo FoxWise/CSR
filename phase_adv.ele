@@ -14,16 +14,24 @@
 &end
 
 &run_control
-        n_indices = 4
+n_indices=1
 &end
 
-&vary_element name=pars1, item=betax, initial=1, final=26, index_limit=10, index_number=0 &end 
+&alter_elements name=PARS1, item=BETAX, value=17.6 &end 
 
-&vary_element name=pars1, item=alphax, initial=0.5, final=0.8, index_limit=4, index_number=1 &end
+&alter_elements name=PARS1, item=ALPHAX, value=0.5 &end
 
-&vary_element name=pars2, item=betax, initial=20.0, final=50.0, index_limit=15, index_number=2 &end 
+&alter_elements name=PARS2, item=BETAX, value=20.0 &end 
 
-&vary_element name=pars2, item=alphax, initial=0.7, final=1.0, index_limit=4, index_number=3 &end
+&alter_elements name=PARS2, item=ALPHAX, value=0.9 &end
+
+&vary_element name=M1, item=R11, enumeration_file= M_pars.sdds, enumeration_column=r11 &end
+
+&vary_element name=M1, item=R12, enumeration_file= M_pars.sdds, enumeration_column=r12 &end
+
+&vary_element name=M1, item=R21, enumeration_file= M_pars.sdds, enumeration_column=r21 &end
+
+&vary_element name=M1, item=R22, enumeration_file= M_pars.sdds, enumeration_column=r22 &end
 
 &bunched_beam
         emit_nx=1e-6,
