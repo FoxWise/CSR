@@ -10,11 +10,16 @@ L1: csrdrift,l=5.4,dz=0.01,use_stupakov=1
 L2: csrdrift,l=1.0,dz=0.01,use_stupakov=1
 L3: csrdrift,l=1.0,dz=0.01,use_stupakov=1
 L4: csrdrift,l=8.9,dz=0.01,use_stupakov=1
+L5: csrdrift,l=0.01,dz=0.01,use_stupakov=1
+QUAD1: quad, l=0.15
+QUAD2: quad, l=0.15
+QUAD3: quad, l=0.15
 W1: watch,filename="%s.w1",mode=coord
 W2: watch,filename="%s.w2",mode=coord
 W3: watch,filename="%s.w3",mode=coord
+quads: line=(QUAD1,L5,QUAD2,L5,QUAD3,L5)
 chicane: line=(B1,L1,B2,L2,B3,L1,B4)
 bl_no_w: line=(q,PARS1,chicane,L3,M1,PARS2,chicane,L4)
 bl_no_m: line=(q,PARS1,W1,chicane,L3,PARS2,W2,chicane,L4,W3)
 bl_no_pars: line=(q,W1,chicane,L3,M1,W2,chicane,L4,W3)
-
+bl_quads: line=(q,PARS1,chicane,L3,quads,PARS2,chicane,L4)

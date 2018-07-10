@@ -7,8 +7,8 @@ sddsprocess M_pars.sdds -define=parameter,beta1,17.6,units=m \
         -define=parameter,alpha2,0.9,units=m \
         -define=column,r11,"beta2 beta1 / sqrt psi cos psi sin alpha1 mult + mult" \
         -define=column,r12,"beta2 beta1 mult sqrt psi sin mult" \
-        -define=column,r21,"-1 alpha1 alpha2 mult + beta1 beta2 mult sqrt / psi sin mult alpha1 alpha2 - beta1 beta2 mult sqrt / psi cos mult +" \
-        -define=column,r22,"beta2 beta1 / sqrt psi cos psi sin alpha1 mult - mult"
+        -define=column,r21,"1 beta2 beta1 mult sqrt / psi cos alpha1 alpha2 - mult psi sin 1 alpha1 alpha2 mult + mult - mult" \
+        -define=column,r22,"beta1 beta2 / sqrt psi cos psi sin alpha2 mult - mult"
 
 exec elegant phase_adv.ele | tee phase_adv.log
 
